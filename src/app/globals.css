@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 80 80% 96.7%;
+    --foreground: 150 63.8% 18.2%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 63.8% 18.2%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 63.8% 18.2%;
+
+    --primary: 84 73.7% 52.4%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 63.8% 18.2%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 84 73.7% 52.4%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 80 80% 96.7%;
+
+    --card: 217.2 32.6% 17.5%;
+    --card-foreground: 80 80% 96.7%;
+
+    --popover: 217.2 32.6% 17.5%;
+    --popover-foreground: 80 80% 96.7%;
+
+    --primary: 84 73.7% 52.4%;
+    --primary-foreground: 222.2 84% 4.9%;
+
+    --secondary: 80 80% 96.7%;
+    --secondary-foreground: 222.2 84% 4.9%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 80 80% 96.7%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 84 73.7% 52.4%;
+  }
+}
+
+@layer base {
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.progress-bar-container {
+    background-color: #e0e0e0;
+    border-radius: 9999px;
+    height: 10px;
+    overflow: hidden;
+}
+.progress-bar {
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 0.5s ease-in-out;
+    background: linear-gradient(90deg, #84CC16, #A3E635);
+}

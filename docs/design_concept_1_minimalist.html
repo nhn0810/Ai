@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowGreen - Concept 1: Minimalist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/lucide-react@0.378.0/dist/umd/lucide-react.min.js" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#84CC16',
+                        secondary: '#14532D',
+                        background: '#FFFFFF',
+                        darkBackground: '#121212',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 dark:bg-black">
+
+    <div
+        class="relative mx-auto h-[850px] w-full max-w-[430px] overflow-hidden rounded-lg border-8 border-black bg-background shadow-2xl">
+        <div class="absolute top-0 z-10 w-full bg-background/80 p-4 backdrop-blur-sm">
+            <div class="flex items-center justify-between">
+                <h1 class="text-2xl font-bold text-secondary">GrowGreen</h1>
+                <div class="flex items-center gap-2">
+                    <span class="font-semibold text-gray-600">김그린</span>
+                    <img src="https://i.pravatar.cc/40?u=kim" alt="User Avatar" class="h-8 w-8 rounded-full">
+                </div>
+            </div>
+        </div>
+
+        <main class="h-full overflow-y-auto pt-20 pb-24">
+            <div class="p-4">
+                <h2 class="mb-4 text-lg font-semibold text-gray-800">🌱 추천 스터디</h2>
+
+                <!-- Study Card 1 -->
+                <div
+                    class="mb-4 rounded-xl border border-gray-200 bg-white p-4 transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-lg font-bold text-secondary">Next.js 14 마스터하기</h3>
+                        <span class="rounded-full bg-primary/20 px-3 py-1 text-sm font-semibold text-primary">모집중</span>
+                    </div>
+                    <p class="mt-2 text-gray-600">매주 1회, Next.js 최신 기능을 함께 공부하고 프로젝트를 만듭니다.</p>
+                    <div class="mt-3 flex items-center justify-between text-sm text-gray-500">
+                        <span>리더: 이개발</span>
+                        <div class="flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-map-pin">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span>강남역</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Study Card 2 -->
+                <div
+                    class="mb-4 rounded-xl border border-gray-200 bg-white p-4 transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-lg font-bold text-secondary">알고리즘 문제 풀이 (코테 대비)</h3>
+                        <span class="rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-600">승인제</span>
+                    </div>
+                    <p class="mt-2 text-gray-600">매일 아침 1시간, 온라인으로 모여 LeetCode 문제를 풉니다.</p>
+                    <div class="mt-3 flex items-center justify-between text-sm text-gray-500">
+                        <span>리더: 박코딩</span>
+                        <div class="flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-globe">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                                <path d="M2 12h20" />
+                            </svg>
+                            <span>온라인</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Profile Section -->
+                <div class="mt-8 rounded-xl border border-gray-200 bg-white p-4">
+                    <h2 class="mb-4 text-lg font-semibold text-gray-800">📊 나의 활동 점수</h2>
+                    <div class="flex justify-around">
+                        <div class="text-center">
+                            <p class="text-sm text-gray-500">매너 점수</p>
+                            <p class="text-2xl font-bold text-primary">36.5°</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-sm text-gray-500">참여 점수</p>
+                            <p class="text-2xl font-bold text-secondary">85점</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <a href="#" class="text-sm font-medium text-gray-600 hover:text-primary">랭킹 보러가기 →</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation Bar -->
+        <div
+            class="absolute bottom-0 w-full translate-y-0 transform border-t border-gray-200 bg-white/80 backdrop-blur-sm transition-transform duration-300">
+            <nav class="flex h-16 items-center justify-around">
+                <a href="#" class="flex flex-col items-center gap-1 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-home">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                    <span class="text-xs font-bold">홈</span>
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 text-gray-500 hover:text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-compass">
+                        <circle cx="12" cy="12" r="10" />
+                        <polygon points="16.24 7.76 -16.24 7.76 16.24 16.24 7.76 16.24 16.24 7.76" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg>
+                    <span class="text-xs">스터디 찾기</span>
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 text-gray-500 hover:text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-message-circle">
+                        <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                    </svg>
+                    <span class="text-xs">채팅</span>
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 text-gray-500 hover:text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-user">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                    <span class="text-xs">내 정보</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+</body>
+
+</html>

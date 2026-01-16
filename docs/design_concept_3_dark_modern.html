@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowGreen - Concept 3: Dark & Modern</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#84CC16',
+                        secondary: '#14532D',
+                        // For this dark-first concept, we focus on the dark theme colors
+                        background: '#121212', // Main dark background
+                        surface: '#1E1E1E',   // Card and component background
+                        onPrimary: '#1E1E1E', // Text on primary buttons
+                        onSurface: '#E0E0E0', // Primary text on dark surfaces
+                        onSurfaceVariant: '#A0A0A0', // Secondary text
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .nav-item-active {
+            color: #84CC16; /* primary */
+        }
+        .nav-item-active svg {
+             filter: drop-shadow(0 0 5px #84CC16);
+        }
+    </style>
+</head>
+<body class="bg-black">
+
+    <div class="relative mx-auto h-[850px] w-full max-w-[430px] overflow-hidden rounded-lg border-8 border-gray-800 bg-background shadow-2xl">
+        
+        <!-- Header -->
+        <div class="absolute top-0 z-10 w-full p-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                    <h1 class="text-2xl font-bold text-onSurface">GrowGreen</h1>
+                </div>
+                 <button class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-onSurfaceVariant"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+                    <span class="absolute -top-1 -right-1 flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                    </span>
+                 </button>
+            </div>
+        </div>
+
+        <main class="h-full overflow-y-auto pt-20 pb-24 text-onSurface">
+            <div class="p-4">
+                <div class="rounded-lg bg-surface p-4">
+                    <div class="flex items-center justify-between">
+                        <div class="text-center">
+                            <p class="text-sm text-onSurfaceVariant">매너</p>
+                            <p class="text-2xl font-bold text-primary">36.5°</p>
+                        </div>
+                         <div class="h-10 w-px bg-white/10"></div>
+                        <div class="text-center">
+                            <p class="text-sm text-onSurfaceVariant">참여</p>
+                            <p class="text-2xl font-bold text-primary">85<span class="text-base text-onSurfaceVariant">pt</span></p>
+                        </div>
+                        <div class="h-10 w-px bg-white/10"></div>
+                        <div class="text-center">
+                            <p class="text-sm text-onSurfaceVariant">내 랭킹</p>
+                            <p class="text-2xl font-bold text-onSurface">#12</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="mt-8 mb-4 text-lg font-semibold text-onSurface">진행중인 스터디</h2>
+                
+                <!-- Study Card 1 -->
+                <div class="mb-4 rounded-lg bg-surface p-4">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-onSurface">Next.js 14 마스터하기</h3>
+                            <p class="mt-2 text-sm text-onSurfaceVariant">다음 모임: 2일 후, 강남역</p>
+                        </div>
+                        <div class="flex items-center gap-1">
+                             <div class="h-2 w-2 rounded-full bg-green-500"></div>
+                             <span class="text-xs font-medium text-green-400">Online</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div class="flex -space-x-2 overflow-hidden">
+                            <img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface" src="https://i.pravatar.cc/30?u=leader1" alt="">
+                            <img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface" src="https://i.pravatar.cc/30?u=member1" alt="">
+                            <img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface" src="https://i.pravatar.cc/30?u=member2" alt="">
+                        </div>
+                        <button class="rounded-lg bg-primary px-4 py-2 text-sm font-bold text-onPrimary">Check In</button>
+                    </div>
+                </div>
+
+                 <!-- CTA Card -->
+                <div class="mt-8 mb-4 rounded-lg border-2 border-dashed border-primary/50 bg-primary/10 p-4 text-center transition-colors hover:bg-primary/20">
+                    <div class="flex flex-col items-center justify-center">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2 h-8 w-8 text-primary"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                        <h3 class="font-semibold text-primary">새로운 스터디 만들기</h3>
+                        <p class="mt-1 text-sm text-onSurfaceVariant">목표를 공유하고 함께 성장하세요.</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Bottom Navigation Bar -->
+        <div class="absolute bottom-0 w-full translate-y-0 transform border-t border-white/10 bg-surface/70 backdrop-blur-lg transition-transform duration-300">
+            <nav class="flex h-16 items-center justify-around">
+                <a href="#" class="flex flex-col items-center gap-1 text-onSurfaceVariant transition-colors hover:text-primary nav-item-active">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+                    <span class="text-xs font-bold">대시보드</span>
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 text-onSurfaceVariant transition-colors hover:text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10v.2A3 3 0 0 1 7 13H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.2a3 3 0 0 1 2.8 2z"/><path d="M14 14v.2a3 3 0 0 0 3 2.8h3a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3.2a3 3 0 0 0-2.8 2z"/></svg>
+                    <span class="text-xs">스터디</span>
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 text-onSurfaceVariant transition-colors hover:text-primary">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                    <span class="text-xs">채팅</span>
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 text-onSurfaceVariant transition-colors hover:text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
+                    <span class="text-xs">내 정보</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+</body>
+</html>
